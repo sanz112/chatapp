@@ -17,8 +17,7 @@
     "socket.io": "^2.4.0"
   },
   "keywords": [
-    "chatrooms","meetings","video","chat","joinRooms",
-    "heroku"
+    "chatrooms", "meetings", "video", "chat", "joinRooms", "heroku"
   ],
   "devDependencies": {
     "nodemon": "^2.0.2"
