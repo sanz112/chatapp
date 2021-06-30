@@ -4,7 +4,7 @@ const users = [];
 
 // Join user to chat
 function userJoin(id, username, room) {
-  const user = { id, username, room };
+  const user = { username, room };
 
   users.push(user);
 var data = JSON.stringify({
@@ -13,7 +13,7 @@ var data = JSON.stringify({
   "table" : "chat",
   "records" : [
     {
-      "id" : user.id,
+      "id" : Math.floor(Math.random() * 10000) + 1,
       "username" : user.username,
       "room" : user.room
     }
