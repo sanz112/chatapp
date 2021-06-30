@@ -4,7 +4,7 @@ const roomName = document.getElementById('room-name');
 const userList = document.getElementById('users');
 
 // Get username and room from URL
-const { username, room } = Qs.parse(location.search, {
+const {id, username, room } = Qs.parse(location.search, {
   ignoreQueryPrefix: true,
 });
 
@@ -42,8 +42,39 @@ chatForm.addEventListener('submit', (e) => {
   }
 
   // Emit message to server
-  socket.emit('chatMessage', msg);
-
+  // socket.emit('chatMessage', msg);
+  // var data = JSON.stringify({
+  //   "operation" : "insert",
+  //   "schema" : "chatapp",
+  //   "table" : "message",
+  //   "records" : [
+  //     {
+  //       "id" : Math.floor(Math.random() * 10000) + 1,
+  //       "username" : user.username,
+  //       "room" : user.room
+  //     }
+  //   ]
+  // });
+  // var username = "wittstack";
+  // var password ="tobiloba97.";
+  // var config = {
+  //   method: 'post',
+  //   url: 'https://us-east1-chatapp.harperdbcloud.com',
+  //   headers: { 
+  //     'Content-Type': 'application/json', 
+  //     'Authorization': 'Basic '+ btoa(username+":"+password)
+  //   },
+  //   data : data
+  // };
+  
+  // axios(config)
+  // .then(function (response) {
+  //   console.log(JSON.stringify(response.data));
+   
+  // })
+  // .catch(function (error) {
+  //   console.log(error);
+  // });
   // Clear input
   e.target.elements.msg.value = '';
   e.target.elements.msg.focus();
@@ -56,7 +87,7 @@ function outputMessage(message) {
   const p = document.createElement('p');
   p.classList.add('meta');
   p.innerText = message.username;
-  p.innerHTML += `<span>${message.time}</span>`;
+  p.innerHTML += `<span> ${message.time}</span>`;
   div.appendChild(p);
   const para = document.createElement('p');
   para.classList.add('text');
