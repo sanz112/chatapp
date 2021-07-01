@@ -3,7 +3,7 @@
 :root {
 	--dark-color-a: #3aac05;
 	--dark-color-b: #4d8f38;
-	--light-color: #e6e9ff;
+	--light-color: #f3f4fa;
 	--success-color: #5cb85c;
 	--error-color: #d9534f;
 }
@@ -31,17 +31,17 @@ a {
 
 .btn {
 	cursor: pointer;
-	padding: 5px 15px;
+	padding: 5px 10px;
 	background: var(--light-color);
 	color: var(--dark-color-a);
 	border: 0;
-	font-size: 17px;
+	font-size: 16px;
 }
 
 /* Chat Page */
 
 .chat-container {
-	max-width: 1100px;
+	max-width: 1200px;
 	background: #fff;
 	margin: 30px auto;
 	overflow: hidden;
@@ -112,7 +112,7 @@ a {
 }
 
 .chat-form-container {
-	padding: 20px 30px;
+	padding: 20px 10px;
 	background-color: var(--dark-color-a);
 }
 
@@ -123,8 +123,9 @@ a {
 .chat-form-container input[type='text'] {
 	font-size: 16px;
 	padding: 5px;
-	height: 40px;
-	flex: 1;
+	height: 50px;
+	width: 100%;
+	/* flex: 1; */
 }
 
 /* Join Page */
