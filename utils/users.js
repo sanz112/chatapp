@@ -3,8 +3,8 @@ const btoa = require('btoa');
 const users = [];
 
 // Join user to chat
-function userJoin(id, username, room) {
-  const user = { username, room };
+function userJoin( id, username, room) {
+  const user = { id, username, room };
 
   users.push(user);
 var data = JSON.stringify({

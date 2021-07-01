@@ -43,38 +43,7 @@ chatForm.addEventListener('submit', (e) => {
 
   // Emit message to server
   socket.emit('chatMessage', msg);
-  // var data = JSON.stringify({
-  //   "operation" : "insert",
-  //   "schema" : "chatapp",
-  //   "table" : "message",
-  //   "records" : [
-  //     {
-  //       "id" : Math.floor(Math.random() * 10000) + 1,
-  //       "username" : user.username,
-  //       "room" : user.room
-  //     }
-  //   ]
-  // });
-  // var username = "wittstack";
-  // var password ="tobiloba97.";
-  // var config = {
-  //   method: 'post',
-  //   url: 'https://us-east1-chatapp.harperdbcloud.com',
-  //   headers: { 
-  //     'Content-Type': 'application/json', 
-  //     'Authorization': 'Basic '+ btoa(username+":"+password)
-  //   },
-  //   data : data
-  // };
   
-  // axios(config)
-  // .then(function (response) {
-  //   console.log(JSON.stringify(response.data));
-   
-  // })
-  // .catch(function (error) {
-  //   console.log(error);
-  // });
   // Clear input
   e.target.elements.msg.value = '';
   e.target.elements.msg.focus();
